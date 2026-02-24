@@ -122,6 +122,7 @@ button:hover {
     font-size: 14px;
     margin-bottom: 10px;
     opacity: 0.85;
+    cursor: pointer;
 }
 
 button {
@@ -222,7 +223,7 @@ button {
     <div class="sub">Selecione a categoria e depois escolha a loja que traremos as melhores ofertas para você</div>
 
     <!-- Botão para abrir categorias -->
-    <div class="titulo-botoes" style="cursor:pointer; margin-bottom:5px;" onclick="toggleCategorias()">
+    <div class="titulo-botoes" onclick="toggleCategorias()">
         Categorias ▼
     </div>
     
@@ -291,6 +292,8 @@ button {
 </div>
 
 <script>
+let ultimoProdutoSelecionado = "";
+
 function toggleCategorias() {
     const lista = document.getElementById("categoriasLista");
     if (lista.style.display === "none") {
@@ -299,6 +302,23 @@ function toggleCategorias() {
         lista.style.display = "none";
     }
 }    
+
+function setProduto(valor) {
+    document.getElementById("produto").value = valor;
+    ultimoProdutoSelecionado = valor;
+}
+
+function getProduto() {
+    var produto = document.getElementById("produto").value.trim();
+    if(produto === "") {
+        produto = ultimoProdutoSelecionado;
+    }
+    if(produto === "") {
+        alert("Digite ou selecione um produto para buscar.");
+        return null;
+    }
+    return produto;
+}
 
 function mercadoLivre() {
     var produto = getProduto();
@@ -315,18 +335,13 @@ function amazon() {
     window.open(link, "_blank");
 }
 
-function setProduto(valor) {
-    document.getElementById("produto").value = valor;
-}
-
 /* Contador de economia animado */
 let economiaTotal = 1000;
 function atualizarEconomia() {
-    // Incremento aleatório entre 20 e 50 reais
     economiaTotal += Math.floor(Math.random() * 31) + 20;
     document.getElementById("economia").innerText = economiaTotal.toLocaleString('pt-BR');
 }
-setInterval(atualizarEconomia, 2000); // atualiza a cada 2 segundos
+setInterval(atualizarEconomia, 2000);
 </script>
 
 </body>
