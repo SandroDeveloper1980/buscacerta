@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BuscaCerta</title>
+<title>Lívia Monteiro – Curadoria</title>
 
 <style>
 body {
@@ -25,6 +25,25 @@ body {
     text-align: center;
     backdrop-filter: blur(15px);
     box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* Contador de economia */
+.contador {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffe600;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px #000;
+}
+
+.foto-influencer {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 10px auto;
+    display: block;
+    border: 3px solid #ffe600;
 }
 
 h1 {
@@ -63,14 +82,12 @@ button:hover {
     transform: scale(1.04);
 }
 
-/* BOTÃO PRINCIPAL */
 .mercado {
     background-color: #ffe600;
     color: black;
     font-size: 17px;
 }
 
-/* BOTÃO SECUNDÁRIO */
 .amazon {
     background-color: #2b3a4f;
     color: black;
@@ -108,12 +125,6 @@ button:hover {
     opacity: 0.85;
 }
 
-.titulo-botoes {
-    font-size: 14px;
-    margin-bottom: 10px;
-    opacity: 0.85;
-}
-
 button {
     display: flex;
     justify-content: center;
@@ -137,11 +148,13 @@ button {
 
 .oferta {
     position: relative;
-    background: rgba(255,255,255,0.1);
+    background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.12));
     padding: 15px;
     border-radius: 14px;
     margin-bottom: 12px;
     text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    border: 2px solid #ffe600;
 }
 
 .selo {
@@ -174,6 +187,7 @@ button {
     color: white;
     font-size: 14px;
     padding: 10px;
+    border-radius: 10px;
 }
 
 .imagem-produto {
@@ -192,21 +206,33 @@ button {
 <body>
 
 <div class="container">
-    <h1>🔎 BuscaCerta</h1>
-    <div class="sub">Encontre as melhores ofertas antes de comprar</div>
 
+    <!-- Contador de economia -->
+    <div class="contador">
+        Você já economizou R$ <span id="economia">0</span>!
+    </div>
+
+    <!-- Foto da influencer -->
+    <img src="livia.jpg" alt="Lívia Monteiro" class="foto-influencer">
+
+    <!-- Nome e subtítulo -->
+    <h1>Lívia Monteiro</h1>
+    <div class="sub">Curadoria de Achadinhos & Ofertas</div>
+
+    <!-- Campo de busca -->
     <input type="text" id="produto" placeholder="Ex: celular samsung" 
     onkeypress="if(event.key==='Enter'){mercadoLivre()}">
 
+    <!-- Botões -->
     <div class="titulo-botoes">Ver ofertas em:</div>
-
     <button class="mercado" onclick="mercadoLivre()">
         <img src="mercadolivre.png" alt="Mercado Livre" class="logo-botao1">
     </button>
-
     <button class="amazon" onclick="amazon()">
         <img src="amazon.png" alt="Amazon" class="logo-botao2">
     </button>
+
+    <!-- Categorias -->
     <div class="categorias">
         <span onclick="setProduto('arroz')">Arroz</span>
         <span onclick="setProduto('celular')">Celular</span>
@@ -215,8 +241,8 @@ button {
         <span onclick="setProduto('notebook')">Notebook</span>
     </div>
 
+    <!-- Ofertas em alta -->
     <h3 style="margin-top:20px;">🔥 Ofertas em Alta</h3>
-
     <div class="ofertas-container">
 
         <div class="oferta">
@@ -224,9 +250,7 @@ button {
             <img src="celular.jpg" alt="Smartphone Samsung A54" class="imagem-produto">
             <p class="produto">Smartphone Samsung A54</p>
             <p class="preco">R$ 1.899</p>
-            <button onclick="window.open('SEU_LINK_AFILIADO_AQUI')">
-                Ver Oferta
-            </button>
+            <button onclick="window.open('SEU_LINK_AFILIADO_AQUI')">Ver Oferta</button>
         </div>
 
         <div class="oferta">
@@ -234,9 +258,7 @@ button {
             <img src="tv.jpg" alt="Smart TV 50” 4K LG" class="imagem-produto">
             <p class="produto">Smart TV 50” 4K LG</p>
             <p class="preco">R$ 2.399</p>
-            <button onclick="window.open('SEU_LINK_AFILIADO_AQUI')">
-                Ver Oferta
-            </button>
+            <button onclick="window.open('SEU_LINK_AFILIADO_AQUI')">Ver Oferta</button>
         </div>
 
         <div class="oferta">
@@ -244,9 +266,7 @@ button {
             <img src="geladeira.jpg" alt="Geladeira Frost Free" class="imagem-produto">
             <p class="produto">Geladeira Frost Free</p>
             <p class="preco">R$ 3.199</p>
-            <button onclick="window.open('SEU_LINK_AFILIADO_AQUI')">
-                Ver Oferta
-            </button>
+            <button onclick="window.open('SEU_LINK_AFILIADO_AQUI')">Ver Oferta</button>
         </div>
 
     </div>
@@ -269,29 +289,30 @@ function getProduto() {
 function mercadoLivre() {
     var produto = getProduto();
     if(!produto) return;
-
     var formatado = produto.replace(/ /g, "-");
-
-    var link = "https://lista.mercadolivre.com.br/" + formatado +
-               "?matt_word=ale_bs2012&matt_tool=35857789";
-
+    var link = "https://lista.mercadolivre.com.br/" + formatado + "?matt_word=ale_bs2012&matt_tool=35857789";
     window.open(link, "_blank");
 }
 
 function amazon() {
     var produto = getProduto();
     if(!produto) return;
-
-    var link = "https://www.amazon.com.br/s?k=" + 
-               encodeURIComponent(produto) +
-               "&tag=SEU_CODIGO_AMAZON";
-
+    var link = "https://www.amazon.com.br/s?k=" + encodeURIComponent(produto) + "&tag=SEU_CODIGO_AMAZON";
     window.open(link, "_blank");
 }
 
 function setProduto(valor) {
     document.getElementById("produto").value = valor;
 }
+
+/* Contador de economia animado */
+let economiaTotal = 0;
+function atualizarEconomia() {
+    // Incremento aleatório entre 20 e 50 reais
+    economiaTotal += Math.floor(Math.random() * 31) + 20;
+    document.getElementById("economia").innerText = economiaTotal.toLocaleString('pt-BR');
+}
+setInterval(atualizarEconomia, 2000); // atualiza a cada 2 segundos
 </script>
 
 </body>
