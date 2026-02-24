@@ -221,20 +221,20 @@ button {
     
     <div class="sub">Selecione a categoria e depois escolha a loja que traremos as melhores ofertas para você</div>
 
-    <!-- Categorias -->
-    <div class="categorias">
-        <span onclick="setProduto('Celulares & Acessórios')">Celulares & Acessórios</span>
-        <span onclick="setProduto('Celulares')">Celulares</span>
-        <span onclick="setProduto('Computadores & Acessórios')">Computadores & Acessórios</span>
-        <span onclick="setProduto('Computadores')">Computadores</span>
-        <span onclick="setProduto('Notebooks')">Notebooks</span>
-        <span onclick="setProduto('Casa & Decoração')">Casa & Decoração</span>
-        <span onclick="setProduto('Moda & Acessórios')">Moda & Acessórios</span>
-        <span onclick="setProduto('Cozinha & Eletrodomésticos')">Cozinha & Eletrodomésticos</span>
-        <span onclick="setProduto('Ferramentas & Automotivo')">Ferramentas & Automotivo</span>
-        <span onclick="setProduto('Brinquedos & Games')">Brinquedos & Games</span>
-        <span onclick="setProduto('Saúde & Bem‑Estar')">Saúde & Bem‑Estar</span>
-        <span onclick="setProduto('Suplementos & Academia')">Suplementos & Academia</span>
+    <!-- Lista de categorias inicialmente escondida -->
+    <div class="categorias" id="categoriasLista" style="display:none;">
+        <span onclick="setProduto('Celulares & Acessórios')">📱 Celulares & Acessórios</span>
+        <span onclick="setProduto('Celulares')">📱 Celulares</span>
+        <span onclick="setProduto('Computadores & Acessórios')">💻 Computadores & Acessórios</span>
+        <span onclick="setProduto('Computadores')">💻 Computadores</span>
+        <span onclick="setProduto('Notebooks')">💻 Notebooks</span>
+        <span onclick="setProduto('Casa & Decoração')">🏠 Casa & Decoração</span>
+        <span onclick="setProduto('Moda & Acessórios')">👗 Moda & Acessórios</span>
+        <span onclick="setProduto('Cozinha & Eletrodomésticos')">🍳 Cozinha & Eletrodomésticos</span>
+        <span onclick="setProduto('Ferramentas & Automotivo')">🧰 Ferramentas & Automotivo</span>
+        <span onclick="setProduto('Brinquedos & Games')">🧸 Brinquedos & Games</span>
+        <span onclick="setProduto('Saúde & Bem‑Estar')">🧘 Saúde & Bem‑Estar</span>
+        <span onclick="setProduto('Suplementos & Academia')">💪 Suplementos & Academia</span>
     </div>
 
     <!-- Campo de busca -->
@@ -286,14 +286,14 @@ button {
 </div>
 
 <script>
-function getProduto() {
-    var produto = document.getElementById("produto").value.trim();
-    if(produto === "") {
-        alert("Digite um produto para buscar.");
-        return null;
+function toggleCategorias() {
+    const lista = document.getElementById("categoriasLista");
+    if (lista.style.display === "none") {
+        lista.style.display = "block";
+    } else {
+        lista.style.display = "none";
     }
-    return produto;
-}
+}    
 
 function mercadoLivre() {
     var produto = getProduto();
