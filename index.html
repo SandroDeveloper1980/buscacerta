@@ -218,7 +218,17 @@ button {
     <!-- Nome e subtítulo -->
     <h1>Lívia Monteiro</h1>
     <div class="sub">Curadoria de Achadinhos & Ofertas</div>
+    
     <div class="sub">Selecione a categoria e depois escolha a loja que traremos as melhores ofertas para você</div>
+
+    <!-- Categorias -->
+    <div class="categorias">
+        <span onclick="setProduto('arroz')">Arroz</span>
+        <span onclick="setProduto('celular')">Celular</span>
+        <span onclick="setProduto('tv 50 polegadas')">TV</span>
+        <span onclick="setProduto('geladeira')">Geladeira</span>
+        <span onclick="setProduto('notebook')">Notebook</span>
+    </div>
 
     <!-- Campo de busca -->
     <input type="text" id="produto" placeholder="Insira aqui um produto específico" 
@@ -232,15 +242,6 @@ button {
     <button class="amazon" onclick="amazon()">
         <img src="amazon.png" alt="Amazon" class="logo-botao2">
     </button>
-
-    <!-- Categorias -->
-    <div class="categorias">
-        <span onclick="setProduto('arroz')">Arroz</span>
-        <span onclick="setProduto('celular')">Celular</span>
-        <span onclick="setProduto('tv 50 polegadas')">TV</span>
-        <span onclick="setProduto('geladeira')">Geladeira</span>
-        <span onclick="setProduto('notebook')">Notebook</span>
-    </div>
 
     <!-- Ofertas em alta -->
     <h3 style="margin-top:20px;">🔥 Ofertas em Alta</h3>
