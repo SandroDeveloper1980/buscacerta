@@ -3,193 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lívia Monteiro – Curadoria</title>
+<title>Clube VIP Tech & Casa</title>
 
 <style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #e8c689, #3c2c06);
-    color: #4a3f35;
+    background: linear-gradient(135deg, #1e1e1e, #2c3e50);
+    color: white;
     display: flex;
     justify-content: center;
 }
 
 .container {
-    background: rgba(255,255,255,0.08);
-    padding: 28px;
-    border-radius: 22px;
+    padding: 30px;
+    border-radius: 20px;
     width: 340px;
-    margin: 40px 0;
+    margin: 50px 0;
     text-align: center;
+    background: rgba(255,255,255,0.05);
     backdrop-filter: blur(15px);
     box-shadow: 0 15px 35px rgba(0,0,0,0.4);
 }
 
-/* Contador de economia */
-.contador {
-    font-size: 16px;
-    font-weight: bold;
-    color: #4a3f35;
-    margin-bottom: 15px;
-}
-
-.foto-influencer {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto 10px auto;
-    display: block;
-    border: 3px solid #4a3f35;
-}
-
 h1 {
-    margin-bottom: 5px;
     font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .sub {
     font-size: 14px;
     opacity: 0.85;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
-input {
-    width: 92%;
-    padding: 14px;
-    border-radius: 12px;
-    border: none;
-    margin-bottom: 18px;
-    font-size: 16px;
-    border: 2px solid #4a3f35;
-}
-
-button {
-    width: 100%;
-    padding: 14px;
-    border-radius: 12px;
-    border: none;
-    font-size: 16px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.2s;
-}
-
-button:hover {
-    transform: scale(1.04);
-}
-
-.mercado {
-    background-color: #ffe600;
-    color: black;
-    font-size: 17px;
-    border: 2px solid #4a3f35;
-}
-
-.amazon {
-    background-color: #2b3a4f;
-    color: black;
-    opacity: 0.9;
-    border: 2px solid #4a3f35;
-}
-
-.categorias {
-    margin-top: 15px;
-}
-
-.categorias span {
-    display: inline-block;
-    background: rgba(255,255,255,0.15);
-    padding: 7px 11px;
-    margin: 4px;
-    border-radius: 9px;
-    cursor: pointer;
-    font-size: 13px;
-    transition: 0.2s;
-}
-
-.categorias span:hover {
-    background: rgba(255,255,255,0.3);
-}
-
-.footer {
-    margin-top: 15px;
-    font-size: 11px;
-    opacity: 0.6;
-}
-
-.titulo-botoes {
-    font-size: 14px;
-    margin-bottom: 10px;
-    opacity: 0.85;
-    cursor: pointer;
-}
-
-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-}
-
-.logo-botao1 {
-    max-height: 170px;
-    max-width: 80%;
-}
-
-.logo-botao2 {
-    max-height: 45px;
-    max-width: 80%;
-}
-
-.ofertas-container {
-    margin-top: 10px;
-}
-
-.oferta {
-    position: relative;
-    background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.12));
-    padding: 15px;
-    border-radius: 14px;
-    margin-bottom: 12px;
+.lista {
     text-align: left;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
-    border: 2px solid #4a3f35;
-}
-
-.produto {
+    margin-bottom: 20px;
     font-size: 14px;
-    margin-bottom: 5px;
 }
 
-.preco {
-    font-size: 18px;
-    font-weight: bold;
-    color: #4a3f35;
-    margin-bottom: 8px;
+.lista p {
+    margin: 8px 0;
 }
 
-.oferta button {
-    width: 100%;
-    background-color: #4a3f35;
-    color: white;
-    font-size: 14px;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.imagem-produto {
-    width: 80px;        
-    height: 80px;         
-    border-radius: 50%;   
-    margin-bottom: 10px;
-    object-fit: cover;    
+.botao {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border: 3px solid #4a3f35;
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #27ae60;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.botao:hover {
+    transform: scale(1.05);
+}
+
+.prova-social {
+    margin-top: 20px;
+    font-size: 12px;
+    opacity: 0.7;
 }
 </style>
 </head>
@@ -198,242 +78,29 @@ button {
 
 <div class="container">
 
-    <!-- Contador de economia -->
-    <div class="contador">
-        Meus seguidores já economizaram </br>R$ <span id="economia">1000</span>!
+    <h1>🔥 Clube VIP Tech & Casa</h1>
+
+    <div class="sub">
+        Promoções reais de eletrônicos e utilidades domésticas.
     </div>
 
-    <!-- Foto da influencer -->
-    <img src="livia.jpg" alt="Lívia Monteiro" class="foto-influencer">
-
-    <!-- Nome e subtítulo -->
-    <h1>Lívia Monteiro</h1>
-    <div class="sub">Curadoria de Achadinhos & Ofertas</div>
-    
-    <div class="sub">Selecione a categoria e depois escolha a loja que traremos as melhores ofertas para você</div>
-
-    <!-- Botão para abrir categorias -->
-    <div class="titulo-botoes" onclick="toggleCategorias()">
-        Categorias ▼
-    </div>
-    
-    <!-- Lista de categorias inicialmente escondida -->
-    <div class="categorias" id="categoriasLista" style="display:none;">
-        <span onclick="setProduto('Celulares & Acessórios')">📱 Celulares & Acessórios</span>
-        <span onclick="setProduto('Celulares')">📱 Celulares</span>
-        <span onclick="setProduto('Computadores & Acessórios')">💻 Computadores & Acessórios</span>
-        <span onclick="setProduto('Computadores')">💻 Computadores</span>
-        <span onclick="setProduto('Notebooks')">💻 Notebooks</span>
-        <span onclick="setProduto('Casa & Decoração')">🏠 Casa & Decoração</span>
-        <span onclick="setProduto('Moda & Acessórios')">👗 Moda & Acessórios</span>
-        <span onclick="setProduto('Cozinha & Eletrodomésticos')">🍳 Cozinha & Eletrodomésticos</span>
-        <span onclick="setProduto('Ferramentas & Automotivo')">🧰 Ferramentas & Automotivo</span>
-        <span onclick="setProduto('Brinquedos & Games')">🧸 Brinquedos & Games</span>
-        <span onclick="setProduto('Saúde & Bem‑Estar')">🧘 Saúde & Bem‑Estar</span>
-        <span onclick="setProduto('Suplementos & Academia')">💪 Suplementos & Academia</span>
+    <div class="lista">
+        <p>✔ Air Fryer com desconto</p>
+        <p>✔ Smartwatch em promoção</p>
+        <p>✔ Fones Bluetooth</p>
+        <p>✔ Produtos para casa com preço baixo</p>
+        <p>✔ Atualizações todos os dias</p>
     </div>
 
-    <!-- Campo de busca -->
-    <input type="text" id="produto" placeholder="Insira aqui um produto específico" 
-    onkeypress="if(event.key==='Enter'){mercadoLivre()}">
+    <a href="SEU_LINK_TELEGRAM_AQUI" class="botao">
+        👉 ENTRAR NO CANAL VIP
+    </a>
 
-    <!-- Botões -->
-    <div class="titulo-botoes">Ver ofertas em:</div>
-    <button class="mercado" onclick="mercadoLivre()">
-        <img src="mercadolivre.png" alt="Mercado Livre" class="logo-botao1">
-    </button>
-    <button class="amazon" onclick="amazon()">
-        <img src="amazon.png" alt="Amazon" class="logo-botao2">
-    </button>
-
-    <!-- Ofertas em alta -->
-    <h3 style="margin-top:20px;">🔥 Promoções da Semana</h3>
-    <div class="ofertas-container">
-
-        <div class="oferta">
-            <img src="001.jpg" alt="Calça Jeans Plus Size Cintura Alta Elastano Lycra Modeladora" class="imagem-produto">
-            <p class="produto">Calça Jeans Plus Size Cintura Alta Elastano Lycra Modeladora</p>
-            <p class="preco">R$ 59,80</p>
-            <button onclick="window.open('https://meli.la/2U6P5Rf')">Ver Oferta</button>
-        </div>
-
-        <div class="oferta">
-            <img src="002.jpg" alt="Tênis Branco Feminino Vili Para Caminhada Academia Treino" class="imagem-produto">
-            <p class="produto">Tênis Branco Feminino Vili Para Caminhada Academia Treino</p>
-            <p class="preco">R$ 99,90</p>
-            <button onclick="window.open('https://meli.la/2Z1WT2d')">Ver Oferta</button>
-        </div>
-
-        <div class="oferta">
-            <img src="003.jpg" alt="Short Jeans Feminino Cintura Alta Com Lycra Barra Desfiada" class="imagem-produto">
-            <p class="produto">Short Jeans Feminino Cintura Alta Com Lycra Barra Desfiada</p>
-            <p class="preco">R$ 49,90</p>
-            <button onclick="window.open('https://meli.la/13y3sgm')">Ver Oferta</button>
-        </div>
-
+    <div class="prova-social">
+        Canal gratuito • Sem spam • Ofertas verificadas
     </div>
 
-    <h3 style="margin-top:20px;">👗 Moda com até 50% OFF</h3>
-    <div class="ofertas-container">
-
-        <div class="oferta">
-            <img src="004.jpg" alt="Biquíni Cintura Alta Hot Pant Cortininha Com Bojo Meia Taça" class="imagem-produto">
-            <p class="produto">Biquíni Cintura Alta Hot Pant Cortininha Com Bojo Meia Taça</p>
-            <p class="preco">R$ 49,63</p>
-            <button onclick="window.open('https://meli.la/18qxY6e')">Ver Oferta</button>
-        </div>
-
-        <div class="oferta">
-            <img src="005.jpg" alt="Sandalia Amarração Salto Grosso Alto Blogueira Moda Corrente" class="imagem-produto">
-            <p class="produto">Sandalia Amarração Salto Grosso Alto Blogueira Moda Corrente</p>
-            <p class="preco">R$ 65,90</p>
-            <button onclick="window.open('https://meli.la/14z8Wef')">Ver Oferta</button>
-        </div>
-
-        <div class="oferta">
-            <img src="006.jpg" alt="Kit 2 Short Alfaiataria Feminino Cintura Alta Envio Imediato" class="imagem-produto">
-            <p class="produto">Kit 2 Short Alfaiataria Feminino Cintura Alta Envio Imediato</p>
-            <p class="preco">R$ 56,90</p>
-            <button onclick="window.open('https://meli.la/2A6cPhm')">Ver Oferta</button>
-        </div>
-
-    </div>
-
-    <h3 style="margin-top:20px;">💄 Beleza que realmente compensa</h3>
-    <div class="ofertas-container">
-
-        <div class="oferta">
-            <img src="007.jpg" alt="Perfume Sedutor Árabe Sabah 100ml Original Feminino" class="imagem-produto">
-            <p class="produto">Perfume Sedutor Árabe Sabah 100ml Original Feminino</p>
-            <p class="preco">R$ 149,50</p>
-            <button onclick="window.open('https://meli.la/2BkWckB')">Ver Oferta</button>
-        </div>
-
-        <div class="oferta">
-            <img src="008.jpg" alt="Mantecorp Protetor Solar Facial Episol Fps 70 Tom 2 Claro" class="imagem-produto">
-            <p class="produto">Mantecorp Protetor Solar Facial Episol Fps 70 Tom 2 Claro</p>
-            <p class="preco">R$ 69,11</p>
-            <button onclick="window.open('https://meli.la/1idzKSB')">Ver Oferta</button>
-        </div>
-
-        <div class="oferta">
-            <img src="009.jpg" alt="Kit Explosão De Óleos Africanos Beleza Natural" class="imagem-produto">
-            <p class="produto">Kit Explosão De Óleos Africanos Beleza Natural</p>
-            <p class="preco">R$ 78,90</p>
-            <button onclick="window.open('https://meli.la/1nUDKwf')">Ver Oferta</button>
-        </div>
-
-    </div>
-
-    <h3 style="margin-top:20px;">📱 Achadinhos úteis do dia a dia</h3>
-    <div class="ofertas-container">
-
-        <div class="oferta">
-            <img src="010.jpg" alt="Copo Térmico Gigante 1,2l Inox Com Tampa E Inox Canudo" class="imagem-produto">
-            <p class="produto">Copo Térmico Gigante 1,2l Inox Com Tampa E Inox Canudo</p>
-            <p class="preco">R$ 49,99</p>
-            <button onclick="window.open('https://meli.la/2JvN148')">Ver Oferta</button>
-        </div>
-
-        <div class="oferta">
-            <img src="011.jpg" alt="Aparelho de Jantar e Chá Ryo Maresia 20 Peças Branco e Marrom Oxford" class="imagem-produto">
-            <p class="produto">Aparelho de Jantar e Chá Ryo Maresia 20 Peças Branco e Marrom Oxford</p>
-            <p class="preco">R$ 299,00</p>
-            <button onclick="window.open('https://meli.la/1avanQo')">Ver Oferta</button>
-        </div>
-
-        <div class="oferta">
-            <img src="012.jpg" alt="Kit 10 Potes Herméticos Vidro Tampa Bambu Seiri Para Mantimentos Cozinha" class="imagem-produto">
-            <p class="produto">Kit 10 Potes Herméticos Vidro Tampa Bambu Seiri Para Mantimentos Cozinha</p>
-            <p class="preco">R$ 150,00</p>
-            <button onclick="window.open('https://meli.la/1reGPtg')">Ver Oferta</button>
-        </div>
-
-    </div>
-
-    <h3 style="margin-top:20px;">🛍️ Meus favoritos pessoais</h3>
-    <div class="ofertas-container">
-
-        <div class="oferta">
-            <img src="013.jpg" alt="Bicicleta Ergométrica Spinning Indoor Mecanica" class="imagem-produto">
-            <p class="produto">Bicicleta Ergométrica Spinning Indoor Mecanica</p>
-            <p class="preco">R$ 536,06</p>
-            <button onclick="window.open('https://meli.la/1pb2iCm')">Ver Oferta</button>
-        </div>
-
-        <div class="oferta">
-            <img src="014.jpg" alt="Short Saia Academia Feminino Cintura Alta Legging Fitness" class="imagem-produto">
-            <p class="produto">Short Saia Academia Feminino Cintura Alta Legging Fitness</p>
-            <p class="preco">R$ 28,99</p>
-            <button onclick="window.open('https://meli.la/1sdZ9Bc')">Ver Oferta</button>
-        </div>
-
-        <div class="oferta">
-            <img src="015.jpg" alt="Creatina 100% Pura 300g Integralmedica - Força e Performance" class="imagem-produto">
-            <p class="produto">Creatina 100% Pura 300g Integralmedica - Força e Performance</p>
-            <p class="preco">R$ 45,97</p>
-            <button onclick="window.open('https://meli.la/1QxQpkE')">Ver Oferta</button>
-        </div>
-
-    </div>
-
-    <div class="footer">
-        Compra inteligente começa aqui.
-    </div>
 </div>
-
-<script>
-let ultimoProdutoSelecionado = "";
-
-function toggleCategorias() {
-    const lista = document.getElementById("categoriasLista");
-    if (lista.style.display === "none") {
-        lista.style.display = "block";
-    } else {
-        lista.style.display = "none";
-    }
-}    
-
-function setProduto(valor) {
-    document.getElementById("produto").value = valor;
-    ultimoProdutoSelecionado = valor;
-}
-
-function getProduto() {
-    var produto = document.getElementById("produto").value.trim();
-    if(produto === "") {
-        produto = ultimoProdutoSelecionado;
-    }
-    if(produto === "") {
-        alert("Digite ou selecione um produto para buscar.");
-        return null;
-    }
-    return produto;
-}
-
-function mercadoLivre() {
-    var produto = getProduto();
-    if(!produto) return;
-    var formatado = produto.replace(/ /g, "-");
-    var link = "https://lista.mercadolivre.com.br/" + formatado + "?matt_word=ale_bs2012&matt_tool=35857789";
-    window.open(link, "_blank");
-}
-
-function amazon() {
-    var produto = getProduto();
-    if(!produto) return;
-    var link = "https://www.amazon.com.br/s?k=" + encodeURIComponent(produto) + "&tag=liviacuradori-20";
-    window.open(link, "_blank");
-}
-
-/* Contador de economia animado */
-let economiaTotal = 1000;
-function atualizarEconomia() {
-    economiaTotal += Math.floor(Math.random() * 31) + 20;
-    document.getElementById("economia").innerText = economiaTotal.toLocaleString('pt-BR');
-}
-setInterval(atualizarEconomia, 2000);
-</script>
 
 </body>
 </html>
